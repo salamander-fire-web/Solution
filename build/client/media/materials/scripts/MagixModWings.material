@@ -1,0 +1,432 @@
+material WingModColour
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref WingModColour_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture wingsTex.jpg
+				tex_coord_set 0
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture wingsTex.jpg
+				colour_op_ex modulate src_texture src_manual 1 1 1 1
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material WingModColour2
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref WingModColour_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture wings2Tex.jpg
+				tex_coord_set 0
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture wings2Tex.jpg
+				colour_op_ex modulate src_texture src_manual 1 1 1 1
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material WingModColour3
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref WingModColour_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture wings3Tex.jpg
+				tex_coord_set 0
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture wings3Tex.jpg
+				colour_op_ex modulate src_texture src_manual 1 1 1 1
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material WingModColour4
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref WingModColour_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture wings4Tex.jpg
+				tex_coord_set 0
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture wings4Tex.jpg
+				colour_op_ex modulate src_texture src_manual 1 1 1 1
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material WingModColour5
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref WingModColour_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture wings5Tex.jpg
+				tex_coord_set 0
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture wings5Tex.jpg
+				colour_op_ex modulate src_texture src_manual 1 1 1 1
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material WingModColour6
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref WingModColour_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture wings6Tex.jpg
+				tex_coord_set 0
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture wings6Tex.jpg
+				colour_op_ex modulate src_texture src_manual 1 1 1 1
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material WingModColour7
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref WingModColour_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture wings7Tex.jpg
+				tex_coord_set 0
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture wings7Tex.jpg
+				colour_op_ex modulate src_texture src_manual 1 1 1 1
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material WingModColour8
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref WingModColour_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture wings8Tex.jpg
+				tex_coord_set 0
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				texture wings8Tex.jpg
+				colour_op_ex modulate src_texture src_manual 1 1 1 1
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}

@@ -1,0 +1,2469 @@
+material TailModColour
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref TailModColour_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark1
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark1.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark2
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark2.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark2.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark3
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark3.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark3.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark4
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark4.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark4.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark5
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark5.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark5.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark6
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark6.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark6.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark7
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark7.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark7.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark8
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark8.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark8.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark9
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark9.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark9.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark10
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark10.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark10.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark11
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark11.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark11.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark12
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark12.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark12.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark13
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark13.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark13.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark14
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark14.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark14.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark15
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark15.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark15.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark16
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark16.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark16.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark17
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark17.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark17.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark18
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark18.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark18.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark19
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark19.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark19.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark20
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark20.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark20.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark21
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark21.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark21.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark22
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark22.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark22.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark23
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark23.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark23.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark24
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark24.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark24.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark25
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark25.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark25.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}
+material TailMark26
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			fragment_program_ref TailMark_PS
+			{
+				param_named_auto colorMod1 custom 1
+				param_named_auto colorMod2 custom 2
+				param_named_auto colorMod3 custom 3
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			texture_unit
+			{
+				texture tailMask1.png
+				tex_coord_set 1
+			}
+			texture_unit
+			{
+				texture tailMark26.png
+				tex_coord_set 2
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMask1.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+			depth_func equal
+			texture_unit
+			{
+				texture tailMark26.png
+				alpha_op_ex source1 src_texture src_texture
+				colour_op_ex source2 src_texture src_texture
+			}
+			texture_unit
+			{
+				colour_op_ex blend_diffuse_alpha src_manual src_current 1 1 1 1
+			}
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+		}
+	}
+}

@@ -1,0 +1,57 @@
+material ManeModColour
+{
+	receive_shadows on
+	technique 1
+	{
+		pass
+		{
+			//scene_blend alpha_blend		
+			fragment_program_ref ManeModColour_PS
+			{
+				param_named_auto colorMod1 custom 1
+			}
+			texture_unit
+			{
+				texture white.jpg
+				tex_coord_set 0
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+			cull_hardware none
+			cull_software none
+		}
+	}
+	technique 2
+	{
+		pass
+		{
+			lighting off
+			texture_unit
+			{
+				colour_op_ex source1 src_manual src_current 1 1 1 1
+			}
+			cull_hardware none
+			cull_software none
+		}
+		pass
+		{
+			ambient 1.000000 1.000000 1.000000 1.000000
+			diffuse 1.000000 1.000000 1.000000 1.000000
+			specular 0.010000 0.010000 0.010000 1.000000
+			emissive 0.000000 0.000000 0.000000 1.000000
+			depth_func equal
+         	   	scene_blend zero src_colour
+			cull_hardware none
+			cull_software none
+		}
+	}
+}
